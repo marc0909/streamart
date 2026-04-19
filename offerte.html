@@ -9,24 +9,28 @@
 
 <body>
 
-<main class="container">
-    <h1>Gratis Offerte</h1>
+<div class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1>Gratis Offerte</h1>
+        <p>Vul hieronder je gegevens in en wij nemen snel contact op.</p>
 
-    <p>Vul hieronder je gegevens in en wij nemen snel contact op.</p>
+        <div class="form-box">
+            <form>
+                <label>Naam</label>
+                <input type="text" name="naam" required>
 
-    <form>
-        <label>Naam</label>
-        <input type="text" name="naam" required>
+                <label>Email</label>
+                <input type="email" name="email" required>
 
-        <label>Email</label>
-        <input type="email" name="email" required>
+                <label>Bericht</label>
+                <textarea name="bericht" rows="5" required></textarea>
 
-        <label>Bericht</label>
-        <textarea name="bericht" rows="5" required></textarea>
-
-        <button type="submit" class="btn blue">Versturen</button>
-    </form>
-</main>
+                <button type="submit" class="btn blue">Versturen</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
