@@ -74,3 +74,37 @@ body {
 .info h2 {
   font-size: 28px;
 }
+.form-box {
+  background: rgba(0,0,0,0.55);
+  padding: 30px 25px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.form-box p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-box label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-box input,
+.form-box textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.form-box button.btn {
+  width: 100%;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
