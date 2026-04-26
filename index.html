@@ -1,28 +1,85 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <title>StreamArt</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StreamArt — Besparen om energie</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>StreamArt Energy optimaliseert energie en Transport</h1>
-      <p>Efficiënte energie, slimme opslag en Transport — volledig afgestemd op uw eisen</p>
-
-      <div class="buttons">
-        <a href="offerte.html" class="btn yellow">Gratis offerte</a>
-        <a href="offerte.html" class="btn blue">Contacteer ons</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <h1>StreamArt</h1>
+        <p class="tagline">Bespaar om energie — slimme oplossingen voor thuis en transport</p>
       </div>
     </div>
   </header>
 
-  <section class="info">
-    <h2>Meer dan 20 jaar ervaring in creatieve media</h2>
-  </section>
+  <main class="container">
+    <!-- Split hero: links Thuisbatterijen, rechts Consultancy -->
+    <section class="split-hero" aria-label="StreamArt oplossingen">
+      <div class="card card-left">
+        <h2>Bespaar vandaag met een thuisbatterij</h2>
+        <p class="lead">Meer controle over uw energieverbruik; lagere kosten en slimme opslag voor uw zonnepanelen.</p>
+        <ul class="bullets">
+          <li><strong>Installatie binnen 1 dag</strong></li>
+          <li><strong>10 jaar garantie</strong></li>
+          <li><strong>Slimme app en monitoring</strong></li>
+        </ul>
+        <a class="btn primary" href="offerte.html#battery">Bereken uw besparing</a>
+        <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
+          <input type="hidden" name="type" value="thuisbatterij">
+          <input name="naam" type="text" placeholder="Naam" required>
+          <input name="email" type="email" placeholder="E‑mail" required>
+          <input name="postcode" type="text" placeholder="Postcode">
+          <button class="btn secondary" type="submit">Ontvang gratis audit</button>
+        </form>
+      </div>
 
+      <div class="card card-right">
+        <h2>Bespaar op transportkosten met slimme inkoop</h2>
+        <p class="lead">Wij onderhandelen namens transporteurs voor de beste voorwaarden bij tolbox‑aanbieders en dieselverkopers.</p>
+        <ul class="bullets">
+          <li><strong>Collectieve inkoop en volumekortingen</strong></li>
+          <li><strong>Contractbeheer en factuurcontrole</strong></li>
+          <li><strong>Snel implementatie en nazorg</strong></li>
+        </ul>
+        <a class="btn primary" href="offerte.html#fleet">Vraag een offerte aan</a>
+        <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
+          <input type="hidden" name="type" value="transporteurs">
+          <input name="bedrijfsnaam" type="text" placeholder="Bedrijfsnaam" required>
+          <input name="contactpersoon" type="text" placeholder="Contactpersoon" required>
+          <input name="email" type="email" placeholder="E‑mail" required>
+          <button class="btn secondary" type="submit">Offerte aanvragen</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="why">
+      <h3>Waarom StreamArt</h3>
+      <p>Wij combineren technische oplossingen en slimme inkoopstrategieën om uw energiekosten structureel te verlagen — voor particulieren en transportbedrijven.</p>
+
+      <div class="case">
+        <h4>Use case</h4>
+        <p>Vloot van 50 vrachtwagens — resultaat: <strong>12% lagere dieselkosten</strong> en <strong>20% korting</strong> op tolbox‑licenties binnen 6 maanden.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-left">
+        <p>© StreamArt • Besparen om energie</p>
+      </div>
+      <div class="footer-right">
+        <nav>
+          <a href="#">Privacy</a>
+          <a href="#">Algemene Voorwaarden</a>
+          <a href="offerte.html">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
