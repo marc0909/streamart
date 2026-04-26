@@ -6,67 +6,74 @@
   <title>Offerte aanvragen — StreamArt</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="simple-header">
-    <div class="container">
-      <h1>Offerte aanvragen</h1>
-      <p class="lead">Kies uw traject: thuisbatterij of offerte voor uw vloot. Wij nemen binnen 48 uur contact op.</p>
-    </div>
-  </header>
 
-  <main class="container forms-page">
-    <!-- Thuisbatterij formulier -->
-    <section id="battery" class="form-section">
-      <h2>Ontvang uw gratis audit voor thuisbatterij</h2>
-      <p>We analyseren uw verbruik en zonnepanelenopbrengst en sturen een maatwerkvoorstel met terugverdientijd.</p>
-      <form action="https://formspree.io/f/mwvaqvwo" method="POST" class="full-form">
-        <input type="hidden" name="type" value="thuisbatterij">
-        <label>Naam</label>
-        <input type="text" name="naam" required>
+<header class="simple-header">
+  <div class="container">
+    <h1>Offerte aanvragen</h1>
+    <p class="lead">Kies uw traject: thuisbatterij of transport consultancy.</p>
+  </div>
+</header>
 
-        <label>E‑mail</label>
-        <input type="email" name="email" required>
+<main class="container forms">
 
-        <label>Postcode</label>
-        <input type="text" name="postcode">
+  <section id="battery" class="form-box">
+    <h2>Gratis audit voor thuisbatterij</h2>
+    <p>We analyseren uw verbruik en zonnepanelenopbrengst en sturen een maatwerkvoorstel.</p>
 
-        <label>Gemiddeld maandelijks verbruik (kWh)</label>
-        <input type="text" name="verbruik">
+    <form action="https://formspree.io/f/mwvaqvwo" method="POST">
+      <input type="hidden" name="type" value="thuisbatterij">
 
-        <button class="btn primary" type="submit">Bereken mijn besparing</button>
-      </form>
-    </section>
+      <label>Naam</label>
+      <input type="text" name="naam" required>
 
-    <!-- Transporteurs formulier -->
-    <section id="fleet" class="form-section">
-      <h2>Offerte voor transporteurs</h2>
-      <p>Wij onderhandelen voor transporteurs om de beste voorwaarden te bekomen bij tolbox‑aanbieders en dieselverkopers.</p>
-      <form action="https://formspree.io/f/mwvaqvwo" method="POST" class="full-form">
-        <input type="hidden" name="type" value="transporteurs">
-        <label>Bedrijfsnaam</label>
-        <input type="text" name="bedrijfsnaam" required>
+      <label>E‑mail</label>
+      <input type="email" name="email" required>
 
-        <label>Contactpersoon</label>
-        <input type="text" name="contactpersoon" required>
+      <label>Postcode</label>
+      <input type="text" name="postcode">
 
-        <label>E‑mail</label>
-        <input type="email" name="email" required>
+      <label>Gemiddeld maandelijks verbruik (kWh)</label>
+      <input type="text" name="verbruik">
 
-        <label>Aantal voertuigen</label>
-        <input type="number" name="aantal_voertuigen">
+      <button class="btn primary" type="submit">Bereken mijn besparing</button>
+    </form>
+  </section>
 
-        <label>Huidige brandstofleverancier</label>
-        <input type="text" name="brandstofleverancier">
+  <section id="fleet" class="form-box">
+    <h2>Offerte voor transporteurs</h2>
+    <p>Wij onderhandelen voor transporteurs om de beste voorwaarden te bekomen bij tolbox‑aanbieders en dieselverkopers.</p>
 
-        <button class="btn primary" type="submit">Offerte aanvragen</button>
-      </form>
-    </section>
-  </main>
+    <form action="https://formspree.io/f/mwvaqvwo" method="POST">
+      <input type="hidden" name="type" value="transporteurs">
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>Dank. Onze consultant neemt binnen 2 werkdagen contact op.</p>
-    </div>
-  </footer>
+      <label>Bedrijfsnaam</label>
+      <input type="text" name="bedrijfsnaam" required>
+
+      <label>Contactpersoon</label>
+      <input type="text" name="contactpersoon" required>
+
+      <label>E‑mail</label>
+      <input type="email" name="email" required>
+
+      <label>Aantal voertuigen</label>
+      <input type="number" name="aantal_voertuigen">
+
+      <label>Huidige brandstofleverancier</label>
+      <input type="text" name="brandstofleverancier">
+
+      <button class="btn primary" type="submit">Offerte aanvragen</button>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>Dank. Onze consultant neemt binnen 2 werkdagen contact op.</p>
+  </div>
+</footer>
+
 </body>
 </html>
