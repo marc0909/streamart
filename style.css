@@ -73,7 +73,7 @@ body{
 .split{
   display:flex;
   gap:20px;
-  margin-top:30px;                /* GEEN overlap meer */
+  margin-top:10px;                /* GEEN overlap meer */
 }
 .panel{
   flex:1;
