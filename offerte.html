@@ -1,78 +1,52 @@
 <!doctype html>
 <html lang="nl">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Offerte aanvragen — StreamArt</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  :root{
-    --yellow:#F4D03F;
-    --blue:#2E86C1;
-    --orange:#FF6A00;
-    --lightgrey:#EDEDED;
-    --card-radius:12px;
-    --shadow:0 8px 30px rgba(0,0,0,0.06);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Inter,Arial,sans-serif;background:var(--lightgrey);color:#222}
-  .container{max-width:1000px;margin:0 auto;padding:20px}
-  h1{color:var(--blue);margin-bottom:6px}
-  .lead{color:#444;margin-bottom:14px}
-  .form-box{background:#fff;padding:20px;border-radius:var(--card-radius);box-shadow:var(--shadow);margin-bottom:20px}
-  .form-box form{display:flex;flex-direction:column;gap:10px}
-  .form-box label{font-weight:600}
-  .form-box input{padding:10px;border-radius:8px;border:1px solid #d7d7d7}
-  .btn.primary{background:var(--orange);color:#fff;padding:12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
-  .footer{background:#222;color:#fff;padding:18px;border-radius:8px;text-align:center;margin-top:20px}
-  @media(max-width:900px){.container{padding:12px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Offerte aanvragen — StreamArt</title>
+  <link rel="stylesheet" href="style.css?v=3">
 </head>
+
 <body>
 
-  <header style="background:#fff;border-bottom:1px solid #e6e6e6">
+  <section class="hero">
     <div class="container">
       <h1>Offerte aanvragen</h1>
-      <p class="lead">Kies uw traject: thuisbatterij of transport consultancy. Wij nemen binnen 48 uur contact op.</p>
+      <p>Kies uw traject: thuisbatterij of transport consultancy.</p>
     </div>
-  </header>
+  </section>
 
   <main class="container">
-    <section id="battery" class="form-box">
+
+    <section id="battery" class="panel left">
       <h2>Gratis audit voor thuisbatterij</h2>
       <p>We analyseren uw verbruik en zonnepanelenopbrengst en sturen een maatwerkvoorstel met terugverdientijd.</p>
-      <form action="https://formspree.io/f/mwvaqvwo" method="POST">
+
+      <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
         <input type="hidden" name="type" value="thuisbatterij">
-        <label>Naam</label>
-        <input type="text" name="naam" required>
-        <label>E‑mail</label>
-        <input type="email" name="email" required>
-        <label>Postcode</label>
-        <input type="text" name="postcode">
-        <label>Gemiddeld maandelijks verbruik (kWh)</label>
-        <input type="text" name="verbruik">
-        <button class="btn primary" type="submit">Bereken mijn besparing</button>
+        <input type="text" name="naam" placeholder="Naam" required>
+        <input type="email" name="email" placeholder="E‑mail" required>
+        <input type="text" name="postcode" placeholder="Postcode">
+        <input type="text" name="verbruik" placeholder="Maandelijks verbruik (kWh)">
+        <button type="submit">Bereken mijn besparing</button>
       </form>
     </section>
 
-    <section id="fleet" class="form-box">
+    <section id="fleet" class="panel right">
       <h2>Offerte voor transporteurs</h2>
       <p>Wij onderhandelen voor transporteurs om de beste voorwaarden te bekomen bij tolbox‑aanbieders en dieselverkopers.</p>
-      <form action="https://formspree.io/f/mwvaqvwo" method="POST">
+
+      <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
         <input type="hidden" name="type" value="transporteurs">
-        <label>Bedrijfsnaam</label>
-        <input type="text" name="bedrijfsnaam" required>
-        <label>Contactpersoon</label>
-        <input type="text" name="contactpersoon" required>
-        <label>E‑mail</label>
-        <input type="email" name="email" required>
-        <label>Aantal voertuigen</label>
-        <input type="number" name="aantal_voertuigen">
-        <label>Huidige brandstofleverancier</label>
-        <input type="text" name="brandstofleverancier">
-        <button class="btn primary" type="submit">Offerte aanvragen</button>
+        <input type="text" name="bedrijfsnaam" placeholder="Bedrijfsnaam" required>
+        <input type="text" name="contactpersoon" placeholder="Contactpersoon" required>
+        <input type="email" name="email" placeholder="E‑mail" required>
+        <input type="number" name="aantal_voertuigen" placeholder="Aantal voertuigen">
+        <input type="text" name="brandstofleverancier" placeholder="Huidige brandstofleverancier">
+        <button type="submit">Offerte aanvragen</button>
       </form>
     </section>
+
   </main>
 
   <footer class="footer">
