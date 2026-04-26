@@ -17,7 +17,7 @@ body{
 /* HERO */
 .hero{
   background:var(--darkgrey);
-  height:160px;
+  height:100px;
   position:relative;
   display:flex;
   justify-content:center;
