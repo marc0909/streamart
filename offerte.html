@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Offerte aanvragen — StreamArt</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Offerte aanvragen — StreamArt</title>
 
-  <!-- Zelfde kritieke inline CSS zodat pagina identiek oogt -->
-  <style>
-    :root{
-      --yellow:#F4D03F;
-      --blue:#2E86C1;
-      --orange:#FF6A00;
-      --darkgrey:#4A4A4A;
-      --lightgrey:#EDEDED;
-      --white:#FFFFFF;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,Arial,sans-serif;background:var(--lightgrey);color:#222}
-    .container{max-width:1000px;margin:0 auto;padding:20px}
-    h1{color:var(--blue);margin-bottom:6px}
-    .lead{color:#444;margin-bottom:14px}
-    .form-box{background:var(--white);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.06);margin-bottom:20px}
-    .form-box form{display:flex;flex-direction:column;gap:10px}
-    .form-box input{padding:10px;border-radius:8px;border:1px solid #d7d7d7}
-    .btn.primary{background:var(--orange);color:#fff;padding:12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
-    .footer{background:#222;color:#fff;padding:18px;border-radius:8px;text-align:center;margin-top:20px}
-    @media(max-width:900px){.container{padding:12px}}
-  </style>
+<style>
+  :root{
+    --yellow:#F4D03F;
+    --blue:#2E86C1;
+    --orange:#FF6A00;
+    --lightgrey:#EDEDED;
+    --card-radius:12px;
+    --shadow:0 8px 30px rgba(0,0,0,0.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Inter,Arial,sans-serif;background:var(--lightgrey);color:#222}
+  .container{max-width:1000px;margin:0 auto;padding:20px}
+  h1{color:var(--blue);margin-bottom:6px}
+  .lead{color:#444;margin-bottom:14px}
+  .form-box{background:#fff;padding:20px;border-radius:var(--card-radius);box-shadow:var(--shadow);margin-bottom:20px}
+  .form-box form{display:flex;flex-direction:column;gap:10px}
+  .form-box label{font-weight:600}
+  .form-box input{padding:10px;border-radius:8px;border:1px solid #d7d7d7}
+  .btn.primary{background:var(--orange);color:#fff;padding:12px;border-radius:8px;border:none;font-weight:700;cursor:pointer}
+  .footer{background:#222;color:#fff;padding:18px;border-radius:8px;text-align:center;margin-top:20px}
+  @media(max-width:900px){.container{padding:12px}}
+</style>
 </head>
 <body>
 
