@@ -1,98 +1,154 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>StreamArt — Besparen om energie</title>
-  <link rel="stylesheet" href="style.css?v=3">
+
+  <!-- Kritieke inline CSS (overschrijft externe styles) -->
+  <style>
+    :root{
+      --yellow:#F4D03F;
+      --blue:#2E86C1;
+      --orange:#FF6A00;
+      --darkgrey:#4A4A4A;
+      --lightgrey:#EDEDED;
+      --white:#FFFFFF;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:var(--lightgrey);color:#222}
+    .container{max-width:1200px;margin:0 auto;padding:20px}
+    /* Top header */
+    .top-header{background:#fff;border-bottom:1px solid #e6e6e6}
+    .header-flex{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .logo{color:var(--blue);font-size:1.4rem;font-weight:700}
+    .header-flex nav a{margin-left:14px;color:var(--blue);text-decoration:none;font-weight:600}
+    /* Hero (donkergrijs met witte tekst) */
+    .hero{background:var(--darkgrey);height:220px;display:flex;align-items:center;justify-content:center;color:var(--white);position:relative}
+    .hero .overlay{position:absolute;inset:0;background:rgba(0,0,0,0.45)}
+    .hero .hero-content{position:relative;z-index:2;text-align:center;padding:0 20px}
+    .hero h1{font-size:1.6rem;margin-bottom:6px}
+    .hero p{opacity:0.95;margin-bottom:12px}
+    .buttons{display:flex;gap:12px;justify-content:center}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none;cursor:pointer}
+    .btn.yellow{background:var(--yellow);color:#000}
+    .btn.blue{background:var(--blue);color:var(--white)}
+    /* SPLIT panels */
+    .split{display:flex;gap:20px;margin-top:-60px;padding:0 20px}
+    .panel{flex:1;background:var(--white);border-radius:12px;padding:26px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    .panel.left{background:linear-gradient(180deg,#ffffff,#f2f7ff)}
+    .panel.right{background:linear-gradient(180deg,#fff7f2,#fff1e6)}
+    .panel h2{margin:0 0 8px;color:var(--blue);font-size:1.25rem}
+    .panel.right h2{color:var(--orange)}
+    .lead{color:#444;margin-bottom:12px}
+    .features{list-style:none;margin:0 0 14px;padding:0}
+    .features li{background:rgba(46,134,193,0.08);padding:10px;border-radius:8px;margin-bottom:8px;font-weight:600}
+    .actions{display:flex;gap:10px;margin-bottom:12px}
+    /* mini forms */
+    .mini-form{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .mini-form input{padding:10px;border-radius:8px;border:1px solid #d7d7d7}
+    .mini-form .submit{background:var(--blue);color:#fff;border:none;padding:10px;border-radius:8px;font-weight:700;cursor:pointer}
+    /* Why / case */
+    .why{margin:28px 0}
+    .case{background:#fff;padding:14px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.06);margin-top:12px}
+    /* Footer */
+    .footer{background:#222;color:#fff;padding:18px;margin-top:28px;border-radius:8px;text-align:center}
+    .footer a{color:var(--yellow);text-decoration:none;margin-left:10px}
+    /* Responsive */
+    @media(max-width:900px){.split{flex-direction:column;margin-top:12px}}
+  </style>
 
 </head>
-
 <body>
 
-<header class="top-header">
-  <div class="container header-flex">
-    <h1 class="logo">StreamArt</h1>
-    <nav>
-      <a href="offerte.html#battery">Thuisbatterijen</a>
-      <a href="offerte.html#fleet">Transport Consultancy</a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-
-  <!-- SPLIT HERO -->
-  <section class="split">
-
-    <!-- LINKS -->
-    <div class="panel left">
-      <h2>Bespaar vandaag met een thuisbatterij</h2>
-      <p class="lead">Meer controle over uw energieverbruik; lagere kosten en slimme opslag voor uw zonnepanelen.</p>
-
-      <ul class="features">
-        <li>Installatie binnen 1 dag</li>
-        <li>10 jaar garantie</li>
-        <li>Slimme app en monitoring</li>
-      </ul>
-
-      <a class="btn primary" href="offerte.html#battery">Bereken uw besparing</a>
-
-      <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
-        <input type="hidden" name="type" value="thuisbatterij">
-        <input type="text" name="naam" placeholder="Naam" required>
-        <input type="email" name="email" placeholder="E‑mail" required>
-        <input type="text" name="postcode" placeholder="Postcode">
-        <button class="btn secondary" type="submit">Ontvang gratis audit</button>
-      </form>
+  <header class="top-header">
+    <div class="container header-flex">
+      <div class="logo">StreamArt</div>
+      <nav>
+        <a href="offerte.html#battery">Thuisbatterijen</a>
+        <a href="offerte.html#fleet">Transport Consultancy</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- RECHTS -->
-    <div class="panel right">
-      <h2>Bespaar op transportkosten met slimme inkoop</h2>
-      <p class="lead">Wij onderhandelen namens transporteurs voor de beste voorwaarden bij tolbox‑aanbieders en dieselverkopers.</p>
-
-      <ul class="features">
-        <li>Collectieve inkoop en volumekortingen</li>
-        <li>Contractbeheer en factuurcontrole</li>
-        <li>Snelle implementatie en nazorg</li>
-      </ul>
-
-      <a class="btn primary" href="offerte.html#fleet">Vraag een offerte aan</a>
-
-      <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
-        <input type="hidden" name="type" value="transporteurs">
-        <input type="text" name="bedrijfsnaam" placeholder="Bedrijfsnaam" required>
-        <input type="text" name="contactpersoon" placeholder="Contactpersoon" required>
-        <input type="email" name="email" placeholder="E‑mail" required>
-        <button class="btn secondary" type="submit">Offerte aanvragen</button>
-      </form>
-    </div>
-
-  </section>
-
-  <section class="why">
-    <h3>Waarom StreamArt</h3>
-    <p>Wij combineren technische oplossingen en slimme inkoopstrategieën om uw energiekosten structureel te verlagen — voor particulieren en transportbedrijven.</p>
-
-    <div class="case">
-      <h4>Use case</h4>
-      <p>Vloot van 50 vrachtwagens — resultaat: <strong>12% lagere dieselkosten</strong> en <strong>20% korting</strong> op tolbox‑licenties binnen 6 maanden.</p>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content container">
+      <h1>StreamArt Energy optimaliseert energie en transport</h1>
+      <p>Efficiënte energie, slimme opslag en transport — volledig afgestemd op uw eisen</p>
+      <div class="buttons">
+        <a class="btn yellow" href="offerte.html#battery">Gratis offerte</a>
+        <a class="btn blue" href="offerte.html#fleet">Contacteer ons</a>
+      </div>
     </div>
   </section>
 
-</main>
+  <main class="container">
+    <section class="split" aria-label="Oplossingen">
+      <!-- LINKS -->
+      <div class="panel left">
+        <h2>Bespaar vandaag met een thuisbatterij</h2>
+        <p class="lead">Meer controle over uw energieverbruik; lagere kosten en slimme opslag voor uw zonnepanelen.</p>
+        <ul class="features">
+          <li>Installatie binnen 1 dag</li>
+          <li>10 jaar garantie</li>
+          <li>Slimme app en monitoring</li>
+        </ul>
+        <div class="actions">
+          <a class="btn yellow" href="offerte.html#battery">Bereken uw besparing</a>
+        </div>
 
-<footer class="footer">
-  <div class="container footer-flex">
-    <span>© StreamArt • Besparen om energie</span>
-    <nav>
+        <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
+          <input type="hidden" name="type" value="thuisbatterij">
+          <input name="naam" type="text" placeholder="Naam" required>
+          <input name="email" type="email" placeholder="E‑mail" required>
+          <input name="postcode" type="text" placeholder="Postcode">
+          <button class="submit" type="submit">Ontvang gratis audit</button>
+        </form>
+      </div>
+
+      <!-- RECHTS -->
+      <div class="panel right">
+        <h2>Bespaar op transportkosten met slimme inkoop</h2>
+        <p class="lead">Wij onderhandelen namens transporteurs voor de beste voorwaarden bij tolbox‑aanbieders en dieselverkopers.</p>
+        <ul class="features">
+          <li>Collectieve inkoop en volumekortingen</li>
+          <li>Contractbeheer en factuurcontrole</li>
+          <li>Snelle implementatie en nazorg</li>
+        </ul>
+        <div class="actions">
+          <a class="btn yellow" href="offerte.html#fleet">Vraag een offerte aan</a>
+        </div>
+
+        <form class="mini-form" action="https://formspree.io/f/mwvaqvwo" method="POST">
+          <input type="hidden" name="type" value="transporteurs">
+          <input name="bedrijfsnaam" type="text" placeholder="Bedrijfsnaam" required>
+          <input name="contactpersoon" type="text" placeholder="Contactpersoon" required>
+          <input name="email" type="email" placeholder="E‑mail" required>
+          <button class="submit" type="submit">Offerte aanvragen</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="why">
+      <h3>Waarom StreamArt</h3>
+      <p>Wij combineren technische oplossingen en slimme inkoopstrategieën om uw energiekosten structureel te verlagen — voor particulieren en transportbedrijven.</p>
+
+      <div class="case">
+        <h4>Use case</h4>
+        <p>Vloot van 50 vrachtwagens — resultaat: <strong>12% lagere dieselkosten</strong> en <strong>20% korting</strong> op tolbox‑licenties binnen 6 maanden.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © StreamArt • Besparen om energie
       <a href="#">Privacy</a>
       <a href="#">Algemene Voorwaarden</a>
       <a href="offerte.html">Contact</a>
-    </nav>
-  </div>
-</footer>
+    </div>
+  </footer>
 
 </body>
 </html>
